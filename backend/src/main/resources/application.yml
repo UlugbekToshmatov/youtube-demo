@@ -3,5 +3,15 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/youtube-clone
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-v8j0ylizwdh514u7.eu.auth0.com/
+
+auth0:
+  audience: http://localhost:8080
+
+
 aws:
   region: "EU"

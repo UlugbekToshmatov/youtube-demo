@@ -1,21 +1,18 @@
-package com.example.youtube.entities;
+package com.example.youtube.dtos;
 
+import com.example.youtube.entities.Comment;
 import com.example.youtube.enums.VideoStatus;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 import java.util.List;
 
-@Document(value = "Videos")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Builder
-public class Video {
-    @Id
+public class VideoResponse {
     private String id;
     private String title;
     private String description;
@@ -28,7 +25,5 @@ public class Video {
     private Integer viewCount;
     private String thumbnailUrl;
     private List<Comment> comments;
-    private Boolean deleted;
     private Date createdDate;
-    private Date modifiedDate;
 }
